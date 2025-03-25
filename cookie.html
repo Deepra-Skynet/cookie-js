@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+        body {
+        background-color: #f2f2f2;
+        font-family: "Helvetica", sans-serif;
+        }
+        .container {
+        max-width: 1200px;
+        padding-inline: 2vw;
+        margin: auto;
+        }
+        h1 {
+        margin-block: 0;
+        text-align: center;
+        }
+        .cookie {
+        background-color: #fff;
+        max-width: 600px;
+        margin: 100px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        position: relative;
+        display: none;
+        }
+        .close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto quibusdam voluptatibus nobis voluptatem! Qui ratione iusto recusandae ullam officiis corrupti quo excepturi, debitis dignissimos possimus ipsum maxime sed, dolor deleniti reiciendis! Laudantium ipsum, fuga ut perspiciatis temporibus corporis, sit reiciendis nemo aliquid officiis veritatis itaque velit sequi error, repudiandae dolores labore expedita necessitatibus dolorem officia numquam. Tempora voluptatem laudantium eum ea ipsa delectus. Eveniet tempora sequi eum, autem excepturi ad nisi minus labore dignissimos laboriosam, inventore ullam sunt. Quo, minima iste natus in provident exercitationem, doloribus doloremque molestias reprehenderit accusantium rem corporis maxime consequatur? Labore laudantium omnis nesciunt explicabo laboriosam quidem expedita? Aliquam voluptate ducimus quis modi aperiam provident placeat. Quia reiciendis, nemo dicta, dolorem quam mollitia neque alias ratione suscipit hic tenetur nesciunt maxime? Nihil tempora debitis sequi tenetur! Aspernatur tenetur sequi dolores iure quo vel commodi eveniet, alias explicabo aut dolor accusantium quos eius veritatis non ratione sunt officia temporibus error debitis. Aspernatur nemo quam dolorum explicabo sint id ipsum! Fugiat possimus accusamus voluptatibus fugit autem, eius officiis quidem. Porro neque nobis perspiciatis, ullam quasi itaque vitae expedita vero ea perferendis excepturi assumenda dolorum? Eligendi error, repudiandae nesciunt quas delectus perspiciatis esse? Sequi ullam dignissimos beatae hic accusantium.</p>
+        <div class="cookie">
+            <h1>Welcome</h1>
+            <div class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-x" viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                    </svg>
+            </div>
+        </div>        
+    </div>
+
+    <script>
+        window.addEventListener("load", function () {
+            function showCookie() {
+                document.querySelector(".cookie").style.display = "block";
+            }
+            setTimeout(showCookie, 1000);
+        });
+
+        document.querySelector(".close").addEventListener("click", function () {
+            document.querySelector(".cookie").style.display = "none";
+        });
+    </script>
+</body>
+</html>
