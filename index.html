@@ -47,22 +47,27 @@
     </div>
 
     <script>
-                let buttons = document.querySelectorAll(".button")
+        let buttons = document.querySelectorAll(".button")
 
-                let executeCookie = () => {
+        window.addEventListener("load", executeCookie = () => {
+            
+            if (document.cookie.includes ("Deepra")) return;
+
+            function showCookie() {
                 document.querySelector(".cookieCon").style.display = "block";
+            }
+            setTimeout(showCookie, 1000);
 
-                    buttons.forEach(button => {
-                        button.addEventListener("click", function () {
-                        document.querySelector(".cookieCon").style.display = "none";
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+            document.querySelector(".cookieCon").style.display = "none";
 
-                        if(button.id == "agree"){
-                            document.cookie = "cookieBy = name;" + 60 * 60 * 24 * 30;
-                        }
-                        })
-                    })
-                };
-                window.addEventListener("load", executeCookie);
+            if(button.id == "agree"){
+                document.cookie = "cookieBy = kim" + 60 * 60 * 24 * 30;
+            }
+            })
+            })
+        });
 
         // document.querySelector(".close").addEventListener("click", function () {
         //     document.querySelector(".cookieCon").style.display = "none";
