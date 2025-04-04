@@ -50,20 +50,24 @@
         let buttons = document.querySelectorAll(".button")
 
         window.addEventListener("load", executeCookie = () => {
-
+            //if cookie contains kim it will be returned and below of this code will not run
             if (document.cookie.includes ("kim")) return;
 
+            // cookie popup
             function showCookie() {
                 document.querySelector(".cookieCon").style.display = "block";
             }
             setTimeout(showCookie, 1000);
 
+            // click on buttons cookie disappear
             buttons.forEach(button => {
                 button.addEventListener("click", function () {
             document.querySelector(".cookieCon").style.display = "none";
 
+            //if button has agree id
             if(button.id == "agree"){
-                document.cookie = "cookieBy = kim;" + 60 * 60 * 24 * 30;
+                //set cookies for 1 month. 60 = 1 min, 60 = 1 hours, 24 = 1 day, 30 = 30 days
+                document.cookie = "cookieBy = kim; max-age=" + 60 * 60 * 24 * 30;
             }
             })
             })
